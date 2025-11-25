@@ -1,0 +1,15 @@
+/* Make all asterisks (*) in forms red */
+.MuiFormLabel-asterisk {
+  color: #ef4444 !important;
+}
+
+/* Alternative selector for any asterisk in form labels */
+.MuiInputLabel-asterisk {
+  color: #ef4444 !important;
+}
+
+/* General asterisk styling for any form element */
+form .MuiFormLabel-root .MuiFormLabel-asterisk,
+form .MuiInputLabel-root .MuiInputLabel-asterisk {
+  color: #ef4444 !important;
+}

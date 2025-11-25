@@ -1,0 +1,203 @@
+
+.register-container {
+  background: linear-gradient(135deg, #515257 0%, #48464b 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.register-card-body {
+  padding: 2.5rem;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.register-icon {
+  font-size: 4rem;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.register-title {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.input-group-text {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+}
+
+.form-control, .form-select {
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: none;
+  background: #fff;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+.register-btn {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  border: none;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(86, 171, 47, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.register-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.4);
+  background: linear-gradient(45deg, #4a9625, #96d4b5);
+}
+
+.register-btn:disabled {
+  background: linear-gradient(45deg, #95a5a6, #bdc3c7);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(149, 165, 166, 0.3);
+}
+
+.register-btn i {
+  margin-right: 0.5rem;
+}
+
+.input-group:nth-child(1) .input-group-text {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.input-group:nth-child(2) .input-group-text {
+  background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+
+.input-group:nth-child(3) .input-group-text {
+  background: linear-gradient(45deg, #fad0c4, #ffd1ff);
+}
+
+.input-group:nth-child(4) .input-group-text {
+  background: linear-gradient(45deg, #ffecd2, #fcb69f);
+}
+
+.input-group:nth-child(5) .input-group-text {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+}
+
+.password-row .input-group:first-child .input-group-text {
+  background: linear-gradient(45deg, #d299c2, #fef9d7);
+}
+
+.password-row .input-group:last-child .input-group-text {
+  background: linear-gradient(45deg, #89f7fe, #66a6ff);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.form-group {
+  animation: slideInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+.form-group:nth-child(5) { animation-delay: 0.5s; }
+.form-group:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.register-btn:disabled i {
+  animation: spin 1s linear infinite;
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 1rem;
+  }
+  
+  .register-card {
+    width: 100%;
+    max-width: 380px;
+  }
+  
+  .register-card-body {
+    padding: 2rem 1.5rem;
+  }
+}
